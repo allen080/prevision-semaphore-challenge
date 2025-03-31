@@ -1,0 +1,66 @@
+// vermelho: "ESPERE AÍ", 
+// amarelo: "FICA ESPERTO, QUERIDO", 
+// verde:"SIMBORA!"
+// vermelho -> verde -> amarelo
+// pode pedir para ir para o próximo estado
+// pode perguntar a mensagem
+
+class State {
+    currentMsg = null
+    nextState = null
+    constructor(Semaphore s){}
+
+    getMsg(): return currentMsg
+
+    changeState(){
+        
+    }
+}
+
+class RedState extends State {
+    constructor(Semaphore s){
+        nextState = GreenState
+    }
+
+    currentMsg = "ESPERE AÍ"
+    changeState(){
+
+    }
+
+}
+
+class GreenState extends State {
+    constructor(Semaphore s){
+        nextState = YellowState
+    }
+
+    currentMsg = "SIMBORA"
+}
+
+class YellowState extends State {
+    constructor(Semaphore s){
+        nextState = RedState
+    }
+
+    currentMsg = "FICA ESPERTO, QUERIDO"
+}
+
+class Semaphore {
+    currentState: State
+
+    constructor(){
+        currentState = RedState
+    }
+
+    change(){
+        currentState = currentState->nextState
+    }
+
+
+}
+
+a cada segundo imprimir aquela mensagem
+ 
+vermelho - 10s
+verde - 5s
+amarelo - 1s
