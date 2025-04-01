@@ -12,22 +12,22 @@ export default class Semaphore {
         green.setNextState(yellow)
         yellow.setNextState(red)
 
-        this.currentState = red // initial state
+        this.initialState = red // initial state
     }
 
-    getCurrentState(){
-        return this.currentState
+    getInitialState(){
+        return this.initialState
     }
 
     getNextState(){
-        return this.currentState.getNextState()
+        return this.initialState.getNextState()
     }
 
     start(){
-        this.currentState.handle()
+        this.initialState.handle()
     }
 
     getMessage(){
-        return this.currentState.getMessage()
+        return this.initialState.getMessage()
     }
 }

@@ -14,7 +14,7 @@ describe("Testing semaphore", ()=>{
     test("if semaphore initiates with red light", ()=>{    
         const semaphore = new Semaphore()
 
-        expect(semaphore.currentState).toBeInstanceOf(RedState)
+        expect(semaphore.getInitialState()).toBeInstanceOf(RedState)
     })
 
     test("if semaphore second state is green", () => {

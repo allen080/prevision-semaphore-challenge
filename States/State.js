@@ -5,7 +5,7 @@ export default class State {
         this.nextState = null
     }
 
-    handle() {    
+    handle() {
         console.log(this.getMessage())
         
         const msgExecutesInterval = setInterval(() => {
@@ -19,7 +19,7 @@ export default class State {
             if(this.nextState) {
                 this.nextState.handle()
             }
-        }, this.getStateDuration() * 1000)
+        }, this.getStateDuration() * 1000) 
       }
 
     getStateDuration(){
