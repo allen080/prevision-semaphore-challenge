@@ -5,12 +5,12 @@
 - NodeJS 16+
 
 ## Execução dos testes:
-- 1. npm install 
-- 2. npm test
+1. npm install 
+2. npm test
 
 ## Execução da aplicação:
-- 1. npm install (opcional se já tiver sido usado anteriormente para executar o teste)
-- 2. npm run start
+1. npm install (opcional se já tiver sido usado anteriormente para executar o teste)
+2. npm run start
 
 ### [*] Execução dos testes:
 
