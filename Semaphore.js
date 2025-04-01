@@ -27,17 +27,7 @@ export default class Semaphore {
         this.currentState.handle()
     }
 
-    changeState() {
-        // const nextStateName = StateMap[this.currentState.constructor.name].next
-        // //console.log("next: "+nextStateName)
-        // this.currentState = StateMap[nextStateName].instance
-
-        //this.currentState = new (this.currentState.getNextState())
-    }
-
     getMessage(){
         return this.currentState.getMessage()
     }
 }
-
-//module.exports = Semaphore
