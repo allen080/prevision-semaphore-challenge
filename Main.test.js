@@ -5,12 +5,6 @@ import State from "./States/State.js";
 import YellowState from "./States/YellowState.js";
 
 describe("Testing semaphore", ()=>{
-    let semaphore;
-
-    beforeEach(()=>{
-        semaphore = new Semaphore()
-    })
-
     test("if semaphore initiates with red light", ()=>{    
         const semaphore = new Semaphore()
 
